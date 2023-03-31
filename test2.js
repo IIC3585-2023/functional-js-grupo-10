@@ -15,8 +15,14 @@ const tagDictionary = {
     '####': 'h4',
     '#####': 'h5',
     '######': 'h6',
-    '*': 'li',
+    '*': 'li', // Agregar ul despues
     // '>': 'blockquote'
+}
+
+const inlineDictionary = {
+    '*': 'em',
+    '**': 'strong',
+    '`': 'code',
 }
 
 // función que recibe el tag de md y le agrega los tag html al principio y final de la linea
@@ -27,20 +33,6 @@ const markdown = fs.readFileSync('ejemplo.md', 'utf-8');
 fs.readFile('ejemplo.md', 'utf8', (err, data) => {
     // let html = []
     const lines = data.split(/\r?\n/) // eol y salto de linea
-    // lines.forEach(line => {
-    //     console.log(checkLineStart('')(line), line)
-    // })
-    
-    // const [firstWord, ...rest] = _.split(lines[1], ' ')
-    // console.log(firstWord)
-    // console.log(rest)
-    // console.log(tagDictionary[firstWord])
-
-    // const splitLines = _.chain(lines)
-    //     .map(line => _.split(line, ' '))
-    //     .map(words => [words[0], words.slice(1).join(' ')])
-    //     .value()
-    // console.log(splitLines)
 
     const splitLines = _.chain(lines) // chain
         .map(line => _.split(line, ' ')) // separa cada palabra dentro de cada linea
@@ -52,19 +44,6 @@ fs.readFile('ejemplo.md', 'utf8', (err, data) => {
         .map(line => _.replace(line, /\*\*(.*?)\*\*/,  `<strong>$1</strong>`))
         .map(line => _.replace(line, /\*(.*?)\*/,  `<em>$1</em>`))
         .map(line => _.replace(line, /\`(.*?)\`/,  `<code>$1</code>`))
-        .reduce((acc, line, index, array) => {
-            index > 0 
-                ? line.slice(0,4) == '<li>' && array[index-1].slice(0,4) != '<li>' 
-                    ? acc.concat('<ul>').concat(line) 
-                    : acc.concat(line) 
-                : line.slice(0,4) == '<li>' 
-                    ? acc.concat('<ul>').concat(line)
-                    : acc.concat(line);
-            },[])
-        // .join('\n')
         .value()
     console.log(splitLines)
-    // splitLines.reduce((newArr, currLine, currIdx) => {
-    //     if (currLine.startsWith('<li>'))
-    // })
 })

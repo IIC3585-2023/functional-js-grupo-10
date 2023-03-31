@@ -1,3 +1,7 @@
+* Hola
+* Chao
+* :(
+
 # El formato Markdown
 ## Parte 1
 El formato de markdown es ampliamente utilizado porque permite describir un **contenido en forma estructurada** en forma sencilla.
