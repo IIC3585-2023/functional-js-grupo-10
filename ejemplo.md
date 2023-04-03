@@ -1,13 +1,11 @@
 # El formato Markdown
 ## Parte 1
-El formato de markdown es ampliamente utilizado porque permite describir un **contenido en forma estructurada** en forma sencilla.
+El formato de [markdown](https://www.markdownguide.org/basic-syntax) es ampliamente utilizado porque permite describir un **contenido en forma estructurada** en forma sencilla.
 
-Por ejemplo se puede usar en *GitHub* para documentar el `código`, escribir ***manuales***, etc.
-
-Hola ***mi*** nombre es ***Flavio***.
+Por ejemplo se puede usar en ***GitHub*** para documentar el `código`, escribir manuales, etc.
 
 ## Parte 2
-Markdown puede ser usado para muchas cosas. Por ejemplo la gente lo utiliza para
+*Markdown* puede ser usado para muchas cosas. Por ejemplo la gente lo utiliza para:
 
 * crear páginas web
 * publicar documentos, 
@@ -17,12 +15,12 @@ Markdown puede ser usado para muchas cosas. Por ejemplo la gente lo utiliza para
 * generar documentación técnica
 * escribir libros
 
+### Integrantes
 
-1. crear páginas web
-2. publicar documentos, 
-3. escribir notas
-4. hacer presentaciones
+1. Rafaela Kara
+2. Cristobal Muñoz
+3. Flavio Tarsetti
 
-* aaaaa
-* bbbbb
-* ccccc
+### Foto
+
+foto: ![dcc :o](https://postgradosdcc.ing.puc.cl/hosted/images/db/2a63921bc04365b0724de5715d4807/OG-DCC.jpg)
